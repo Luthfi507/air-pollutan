@@ -86,6 +86,7 @@ df_polutan, df_wind, df_wd = filter_data(data, station, option, start_date, end_
 # st.write(df_wd)
 
 df_city = load_city()
+st.write(df_city)
 plot_map(df_city, station)
 
 with st.container():
