@@ -164,3 +164,14 @@ def plot_wd(data):
     )
 
     return fig
+
+# data from https://www.researchgate.net/figure/Station-longitude-and-latitude-coordinates_tbl1_364442029
+@st.cache_data
+def load_city():
+    df_city = pd.read_csv('country.txt')
+    return df_city
+
+@st.cache_data(show_spinner=False)
+def plot_map(df, station):
+    selected_data = df[df['station'] == station]
+    st.map(selected_data[['lat', 'lon']])

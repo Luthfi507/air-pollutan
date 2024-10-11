@@ -85,6 +85,9 @@ st.title(f'🌫️ Air Quality in {station}')
 df_polutan, df_wind, df_wd = filter_data(data, station, option, start_date, end_date)
 # st.write(df_wd)
 
+df_city = load_city()
+plot_map(df_city, station)
+
 with st.container():
     names = ['PM2.5', 'PM10', 'SO2', 'NO2', 'O3', 'CO']
     pollutan = calculate_pollutan(df_polutan[names])
