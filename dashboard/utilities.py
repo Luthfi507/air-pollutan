@@ -170,7 +170,13 @@ def plot_wd(data):
 # data from https://www.researchgate.net/figure/Station-longitude-and-latitude-coordinates_tbl1_364442029
 @st.cache_data
 def load_city():
-    df_city = pd.read_csv('country.txt')
+    for root, _, files in os.walk('../'):
+        if os.path.basename(root) == 'dashboard':
+            if 'country.txt' in files:
+                filepath = os.path.join(root, 'country.txt')
+                break
+            
+    df_city = pd.read_csv(filepath)
     return df_city
 
 @st.cache_data(show_spinner=False)
