@@ -4,4 +4,4 @@
 ```
 python -m streamlit run .\dashboard\main.py
 ```
-deploy streamlit: <https://luthfi507-air-pollutan.streamlit.app/>
+deploy streamlit: <https://luthfi507-air-pollutan-dashboardmain-ugdupg.streamlit.app/>
