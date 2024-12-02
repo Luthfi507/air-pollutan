@@ -13,3 +13,4 @@ pip install -r requirements.txt
 ```
 python -m streamlit run .\dashboard\main.py
 ```
+deploy streamlit: <https://luthfi507-air-pollutan.streamlit.app/>
